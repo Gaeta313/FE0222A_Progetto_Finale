@@ -140,17 +140,17 @@
         <button
           mat-menu-item
           (click)="abilita()"
-          [routerLink]="'../clienti/' + fattura.cliente.id + '/fattureCliente'"
+          [routerLink]="'../clienti/' + fattura.cliente?.id + '/fattureCliente'"
         >
-          <mat-icon [style.color]="'#c2185b'">note_add</mat-icon>
+          <mat-icon [style.color]="'#c2185b'">folder_open</mat-icon>
           <span> Tutte le fatture dell'intestatario</span>
         </button>
         <button
           mat-menu-item
           (click)="mostraENascondi()"
-          [routerLink]="fattura.id + '/' + fattura.cliente.id"
+          [routerLink]="fattura.id + '/' + fattura.cliente?.id"
         >
-          <mat-icon [style.color]="'#c2185b'">note_add</mat-icon>
+          <mat-icon [style.color]="'#c2185b'">note_alt</mat-icon>
           <span>Modifica Fattura</span>
         </button>
 
@@ -170,7 +170,7 @@
 
       </p>
 
-      <p> <mat-icon> person</mat-icon>Intestatario: {{ fattura.cliente.ragioneSociale }}</p>
+      <p> <mat-icon> person</mat-icon>Intestatario: {{ fattura.cliente?.ragioneSociale }}</p>
     </mat-card-content>
   </mat-card>
 </div>

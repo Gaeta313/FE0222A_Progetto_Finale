@@ -204,6 +204,7 @@ export class FattureComponent implements OnInit {
           titolo: 'Fattura eliminata con successo !',
         },
       });
+
       this.aggiorna();
     });
   }
